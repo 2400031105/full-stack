@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DonateNow — Essentials for Emergencies</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>DonateNow</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#donate">Donate</a>
+      <a href="#request">Request</a>
+      <a href="#drives">Drives</a>
+      <a href="#admin">Admin</a>
+      <a href="#logistics">Logistics</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h2>Help communities during emergencies</h2>
+      <p>Connect donors, recipients, admins and logistics coordinators to organize essential donations.</p>
+    </section>
+
+    <section id="donate">
+      <h2>Make a Donation</h2>
+      <form id="donationForm">
+        <label>Name <input name="donor" required></label>
+        <label>Item <input name="item" required></label>
+        <label>Quantity <input name="quantity" type="number" min="1" value="1"></label>
+        <label>Notes <input name="notes"></label>
+        <button type="submit">Submit Donation</button>
+      </form>
+      <h3>Available Donations</h3>
+      <ul id="donationList"></ul>
+    </section>
+
+    <section id="request">
+      <h2>Request Items</h2>
+      <form id="requestForm">
+        <label>Recipient Name <input name="recipient" required></label>
+        <label>Needed Item <input name="item" required></label>
+        <label>Quantity <input name="quantity" type="number" min="1" value="1"></label>
+        <label>Location <input name="location"></label>
+        <button type="submit">Submit Request</button>
+      </form>
+      <h3>Open Requests</h3>
+      <ul id="requestList"></ul>
+    </section>
+
+    <section id="drives">
+      <h2>Donation Drives</h2>
+      <form id="driveForm">
+        <label>Title <input name="title" required></label>
+        <label>Description <input name="description"></label>
+        <button type="submit">Create Drive</button>
+      </form>
+      <ul id="driveList"></ul>
+    </section>
+
+    <section id="admin">
+      <h2>Admin Dashboard (simple)</h2>
+      <p>View donations, requests and assignments.</p>
+      <button id="refreshBtn">Refresh</button>
+      <div id="adminData"></div>
+    </section>
+
+    <section id="logistics">
+      <h2>Logistics Coordinator</h2>
+      <p>Assign donations to requests.</p>
+      <label>Donation <select id="assignDonation"></select></label>
+      <label>Request <select id="assignRequest"></select></label>
+      <label>Coordinator <input id="assignCoordinator"></input></label>
+      <label>ETA <input id="assignEta" type="datetime-local"></input></label>
+      <button id="assignBtn">Assign</button>
+      <h3>Assignments</h3>
+      <ul id="assignmentList"></ul>
+    </section>
+  </main>
+
+  <footer>DonateNow — built for emergency response</footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

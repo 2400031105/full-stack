@@ -1,0 +1,14 @@
+{
+  "donations": [],
+  "requests": [],
+  "drives": [],
+  "assignments": [],
+  "feedback": [],
+  "users": [
+    { "id": "u-admin", "username": "admin", "password": "adminpass", "role": "admin" },
+    { "id": "u-donor", "username": "donor", "password": "donorpass", "role": "donor" },
+    { "id": "u-recipient", "username": "recipient", "password": "recipientpass", "role": "recipient" },
+    { "id": "u-logistics", "username": "logistics", "password": "logisticspass", "role": "logistics" }
+  ],
+  "sessions": []
+}
